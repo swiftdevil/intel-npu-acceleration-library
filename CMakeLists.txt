@@ -57,6 +57,7 @@ elseif(UNIX)
         if (LSB_RELEASE_ID STREQUAL "Ubuntu")
             if (LSB_RELEASE_VERSION STREQUAL "24.04")
                 set(LSB_RELEASE_VERSION "22.04")
+            endif()
 
             if (${LSB_RELEASE_VERSION} STREQUAL "18.04" OR ${LSB_RELEASE_VERSION} STREQUAL "20.04" OR ${LSB_RELEASE_VERSION} STREQUAL "22.04")
                 string(REPLACE ".04" "" LSB_RELEASE_VERSION_SHORT ${LSB_RELEASE_VERSION})
