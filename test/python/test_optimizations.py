@@ -81,6 +81,7 @@ def get_model(model_name, hidden_size, intermediate_size, bias):
         conf.num_hidden_layers = 1
         conf.hidden_size = hidden_size
         conf.intermediate_size = intermediate_size
+        conf.head_dim = conf.hidden_size // conf.num_attention_heads
 
         return LlamaModel(conf)
     elif model_name == "GemmaModel":
